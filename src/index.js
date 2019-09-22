@@ -1,19 +1,20 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-// import changeNavigationBarColor from 'react-native-navigation-bar-color';
+import { Provider } from 'react-redux';
+import './config/ReactotronConfig';
+import Routes from './routes';
+import NavigationService from './services/navigation';
 
-import Header from './components/Header';
-import Cart from './pages/Cart';
+import store from './store';
 
 const App = () => {
-  // changeNavigationBarColor('#ffffff', true);
-
   return (
-    <>
+    <Provider store={store}>
       <StatusBar barStyle="light-content" backgroundColor="#141419" />
-      <Header />
-      <Cart></Cart>
-    </>
+      <Routes
+        ref={navigatorRef => NavigationService.setNavigator(navigatorRef)}
+      />
+    </Provider>
   );
 };
 
