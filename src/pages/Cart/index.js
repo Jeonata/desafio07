@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { formatPrice } from '../../util/format';
