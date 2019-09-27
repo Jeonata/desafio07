@@ -4,18 +4,13 @@ import { darken } from 'polished';
 import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
-  padding: 30px;
-  background-color: #191920;
-  flex: 1;
-`;
-
-export const Products = styled.View`
+  margin: 30px;
   background: #fff;
   border-radius: 4px;
-  padding: 2px 0 10px 0;
+  padding: 2px 15px 10px;
 `;
 
-export const CartBox = styled.View`
+export const EmptyCartBox = styled.View`
   flex-direction: column;
   align-items: center;
   padding: 0 15px;
@@ -46,6 +41,16 @@ export const ProductDetails = styled.View`
 export const ProductTitle = styled.Text`
   font-size: 18px;
   color: #333;
+`;
+
+export const EmptyCart = styled.View`
+  margin: 20px;
+`;
+
+export const EmptyCartText = styled.Text`
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
 `;
 
 export const ProductPrice = styled.Text`
